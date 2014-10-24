@@ -72,6 +72,118 @@ namespace Assignment3Theory
             writer.Close();
         }
 
+        public static void OtherMain()
+        {
+            string inputstring = string.Empty;
+            StreamReader streamReader;
+
+            Console.WriteLine("which example would you like to convert to minimized DFA?");
+            Console.WriteLine("1) 3.4.1 input");
+            Console.WriteLine("2) 4.4.1 input");
+            Console.WriteLine("3) 4.4.2 input");
+            Console.WriteLine("4) 4.8   input");
+            Console.WriteLine("5) 4.10  input");
+            int input = int.Parse(Console.ReadLine());
+
+            switch (input)
+            {
+                case 1:
+                    streamReader = new StreamReader("3.4.1_input.txt");
+                    break;
+                case 2:
+                    streamReader = new StreamReader("4.4.1_input.txt");
+                    break;
+                case 3:
+                    streamReader = new StreamReader("4.4.2_input.txt");
+                    break;
+                case 4:
+                    streamReader = new StreamReader("4.8_input.txt");
+                    break;
+                case 5:
+                    streamReader = new StreamReader("4.10_input.txt");
+                    break;
+                default:
+                    return;
+                    break;
+            }
+
+
+            int count = 0;
+            int numberOfStates = 0;
+            List<string> stateNames = new List<string>();
+            List<string> stateInfo = new List<string>();
+            List<string> acceptingStates = new List<string>();
+            String[][] twoDArray;
+            bool doneWithStates = false;
+            while (!streamReader.EndOfStream)
+            {
+                if (doneWithStates)
+                {
+                    acceptingStates = streamReader.ReadLine().Split(',').ToList<string>();
+                }
+                else if (count > 1)
+                {
+                    stateInfo[count - 2] = streamReader.ReadLine();
+                    count++;
+                    if (count == (numberOfStates + 2))
+                    {
+                        doneWithStates = true;
+                    }
+                }
+                else if (count == 1)
+                {
+                    stateNames = streamReader.ReadLine().Split(',').ToList<string>();
+                    count++;
+                }
+                else
+                {
+                    numberOfStates = int.Parse(streamReader.ReadLine());
+                    count++;
+                }
+            }
+
+            HandleString(numberOfStates, stateNames, stateInfo, acceptingStates);
+            PrintTable(stateNames);
+        }
+
+        /// <summary>
+        /// this method isused to handle all input and output it as the DFA
+        /// </summary>
+        /// <param name="file">All input from the file</param>
+        public static void HandleString(int count, List<string> names, List<string> states, List<string> acceptingStates)
+        {
+            for (int i = 0; i < count; i++)
+            {
+
+            }
+        }
+
+        public static void Minimize()
+        {
+            //first round remove final and non final states
+        }
+
+        public static void PrintTable(List<string> States)
+        {
+            Console.WriteLine('\n');
+            for (int i = 1; i < States.Count; i++)
+            {
+                Console.Write(States[i]);
+                for (int j = 0; j < i; j++)
+                {
+
+                }
+                Console.WriteLine();
+            }
+            Console.Write(" ");
+            for (int k = 0; k < States.Count - 1; k++)
+            {
+                Console.Write(States[k]);
+            }
+
+            Console.WriteLine();
+        }
+
         /// <summary>
         /// this determines if the state is accepting
         /// </summary>
