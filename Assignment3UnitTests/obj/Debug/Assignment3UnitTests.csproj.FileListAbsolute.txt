@@ -1,0 +1,7 @@
+c:\users\desktop\documents\visual studio 2012\Projects\Assignment3Theory\Assignment3UnitTests\bin\Debug\Assignment3UnitTests.dll
+c:\users\desktop\documents\visual studio 2012\Projects\Assignment3Theory\Assignment3UnitTests\bin\Debug\Assignment3UnitTests.pdb
+c:\users\desktop\documents\visual studio 2012\Projects\Assignment3Theory\Assignment3UnitTests\obj\Debug\Assignment3UnitTests.csprojResolveAssemblyReference.cache
+c:\users\desktop\documents\visual studio 2012\Projects\Assignment3Theory\Assignment3UnitTests\obj\Debug\Assignment3UnitTests.dll
+c:\users\desktop\documents\visual studio 2012\Projects\Assignment3Theory\Assignment3UnitTests\obj\Debug\Assignment3UnitTests.pdb
+c:\users\desktop\documents\visual studio 2012\Projects\Assignment3Theory\Assignment3UnitTests\bin\Debug\Assignment3Theory.exe
+c:\users\desktop\documents\visual studio 2012\Projects\Assignment3Theory\Assignment3UnitTests\bin\Debug\Assignment3Theory.pdb

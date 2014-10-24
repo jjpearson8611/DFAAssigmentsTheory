@@ -1,0 +1,6 @@
+c:\users\desktop\documents\visual studio 2012\Projects\Assignment3Theory\Assignment3Theory\bin\Debug\Assignment3Theory.exe.config
+c:\users\desktop\documents\visual studio 2012\Projects\Assignment3Theory\Assignment3Theory\bin\Debug\Assignment3Theory.exe
+c:\users\desktop\documents\visual studio 2012\Projects\Assignment3Theory\Assignment3Theory\bin\Debug\Assignment3Theory.pdb
+c:\users\desktop\documents\visual studio 2012\Projects\Assignment3Theory\Assignment3Theory\obj\Debug\Assignment3Theory.exe
+c:\users\desktop\documents\visual studio 2012\Projects\Assignment3Theory\Assignment3Theory\obj\Debug\Assignment3Theory.pdb
+C:\Users\Desktop\Documents\Visual Studio 2012\Projects\Assignment3Theory\Assignment3Theory\obj\Debug\Assignment3Theory.csprojResolveAssemblyReference.cache

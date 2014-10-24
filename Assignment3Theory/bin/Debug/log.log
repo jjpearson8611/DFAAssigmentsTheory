@@ -1,0 +1,172 @@
+DFA on Page 152
+aaaaabba
+current letter a
+current state  State Number: 0 Next A: 1 Next B: 2 Accepting: False
+current letter a
+current state  State Number: 1 Next A: 4 Next B: 1 Accepting: True
+current letter a
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+current letter b
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+current letter b
+current state  State Number: 3 Next A: 4 Next B: 2 Accepting: True
+current letter a
+current state  State Number: 2 Next A: 3 Next B: 2 Accepting: False
+Accepted!
+DFA on Page 152
+aaaaaaaaaaaaa
+current letter a
+current state  State Number: 0 Next A: 1 Next B: 2 Accepting: False
+current letter a
+current state  State Number: 1 Next A: 4 Next B: 1 Accepting: True
+current letter a
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+Declined!
+DFA on Page 154
+aaabbab
+current letter a
+current state  State Number: 0 Next A: 1 Next B: 4 Accepting: True
+current letter a
+current state  State Number: 1 Next A: 2 Next B: 4 Accepting: True
+current letter a
+current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
+current letter b
+current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
+current letter b
+current state  State Number: 3 Next A: 2 Next B: 5 Accepting: False
+current letter a
+current state  State Number: 5 Next A: 5 Next B: 5 Accepting: True
+current letter b
+current state  State Number: 5 Next A: 5 Next B: 5 Accepting: True
+Accepted!
+DFA on Page 154
+aaaaaaaaabababa
+current letter a
+current state  State Number: 0 Next A: 1 Next B: 4 Accepting: True
+current letter a
+current state  State Number: 1 Next A: 2 Next B: 4 Accepting: True
+current letter a
+current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
+current letter b
+current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 3 Next A: 2 Next B: 5 Accepting: False
+current letter b
+current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 3 Next A: 2 Next B: 5 Accepting: False
+current letter b
+current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
+current letter a
+current state  State Number: 3 Next A: 2 Next B: 5 Accepting: False
+Declined!
+DFA on Page 155
+aaaaaaaaaaaaaaaa
+current letter a
+current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
+current letter a
+current state  State Number: 1 Next A: 2 Next B: 0 Accepting: False
+current letter a
+current state  State Number: 2 Next A: 3 Next B: 0 Accepting: False
+current letter a
+current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
+current letter a
+current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
+current letter a
+current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
+current letter a
+current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
+current letter a
+current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
+current letter a
+current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
+current letter a
+current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
+current letter a
+current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
+current letter a
+current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
+current letter a
+current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
+current letter a
+current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
+current letter a
+current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
+current letter a
+current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
+Accepted!
+DFA on Page 155
+aabbbbbabababaabaa
+current letter a
+current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
+current letter a
+current state  State Number: 1 Next A: 2 Next B: 0 Accepting: False
+current letter b
+current state  State Number: 2 Next A: 3 Next B: 0 Accepting: False
+current letter b
+current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
+current letter b
+current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
+current letter b
+current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
+current letter b
+current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
+current letter a
+current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
+current letter b
+current state  State Number: 1 Next A: 2 Next B: 0 Accepting: False
+current letter a
+current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
+current letter b
+current state  State Number: 1 Next A: 2 Next B: 0 Accepting: False
+current letter a
+current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
+current letter b
+current state  State Number: 1 Next A: 2 Next B: 0 Accepting: False
+current letter a
+current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
+current letter a
+current state  State Number: 1 Next A: 2 Next B: 0 Accepting: False
+current letter b
+current state  State Number: 2 Next A: 3 Next B: 0 Accepting: False
+current letter a
+current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
+current letter a
+current state  State Number: 1 Next A: 2 Next B: 0 Accepting: False
+Declined!
