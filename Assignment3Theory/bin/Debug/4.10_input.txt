@@ -1,0 +1,8 @@
+5
+AE,BH,C,DF,G
+AE,BH,DF
+BH,G,C
+C,AE,C
+DF,C,G
+G,G,AE
+C

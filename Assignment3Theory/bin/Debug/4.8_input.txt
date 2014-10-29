@@ -2,9 +2,9 @@
 A,B,C,D,E,F,G,H
 A,B,F
 B,G,C
-C,0,C
+C,A,C
 D,C,G
-E,0,F
+E,H,F
 F,C,G
 G,G,E
 H,G,C

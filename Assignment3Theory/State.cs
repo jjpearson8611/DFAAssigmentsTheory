@@ -12,10 +12,20 @@ namespace Assignment3Theory
         {
         }
 
-        public State(int Number, int aState, int bState, bool accepting)
+        public State(string Name, string aState, string bState, bool accepting)
         {
-            stateNumber = Number;
+            stateName = Name;
             StateA = aState;
+            StateB = bState;
+            Final = accepting;
+        }
+
+        public State(string Name, string aState, State ParmA, string bState, State ParmB, bool accepting)
+        {
+            stateName = Name;
+            StateA = aState;
+            NextA = ParmA;
+            NextB = ParmB;
             StateB = bState;
             Final = accepting;
         }
@@ -23,7 +33,16 @@ namespace Assignment3Theory
         /// <summary>
         /// What is my state number
         /// </summary>
-        public int stateNumber
+        public string stateName
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// if an a is next where do we go
+        /// </summary>
+        public string StateA
         {
             get;
             set;
@@ -32,16 +51,19 @@ namespace Assignment3Theory
         /// <summary>
         /// if a b is next where do we go
         /// </summary>
-        public int StateA
+        public string StateB
         {
             get;
             set;
         }
 
-        /// <summary>
-        /// if a b is next where do we go
-        /// </summary>
-        public int StateB
+        public State NextA
+        {
+            get;
+            set;
+        }
+
+        public State NextB
         {
             get;
             set;
@@ -61,7 +83,7 @@ namespace Assignment3Theory
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public int nextState(char input)
+        public string nextState(char input)
         {
             if (input == 'a')
             {
@@ -75,7 +97,7 @@ namespace Assignment3Theory
 
         public override string ToString()
         {
-            return " State Number: " + stateNumber + " Next A: " + StateA + " Next B: " + StateB + " Accepting: " + Final;
+            return " State Number: " + stateName + " Next A: " + StateA + " Next B: " + StateB + " Accepting: " + Final;
         }
     }
 }

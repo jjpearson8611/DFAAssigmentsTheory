@@ -1,172 +1,348 @@
-DFA on Page 152
-aaaaabba
-current letter a
-current state  State Number: 0 Next A: 1 Next B: 2 Accepting: False
-current letter a
-current state  State Number: 1 Next A: 4 Next B: 1 Accepting: True
-current letter a
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
-current letter b
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
-current letter b
-current state  State Number: 3 Next A: 4 Next B: 2 Accepting: True
-current letter a
-current state  State Number: 2 Next A: 3 Next B: 2 Accepting: False
+8
+ABCE,BCDEG,DFG,BCE,BCEFG,DG,FG,TRAP
+ABCE,BCDEG,DG
+BCDEG,BCDEG,DFG
+DFG,BCE,BCEFG
+BCE,BCDEG,DG
+BCEFG,BCDEG,BCDEG
+DG,BCE,FG
+FG,TRAP,BCE
+TRAP,TRAP,TRAP
+BCDEG,DFG,BCEFG,DG,FG
+This is with table descriptive information
+
+BCDEG 1
+DFG 12
+BCE 011
+BCEFG 1421
+DG 12412
+FG 123123
+TRAP 2112111
+  ABCEBCDEGDFGBCEBCEFGDGFG
+This is without table descriptive information
+
+1
+12
+011
+1421
+12412
+123123
+2112111
+
+Using 3.4.1 Example
+aabb
 Accepted!
-DFA on Page 152
-aaaaaaaaaaaaa
-current letter a
-current state  State Number: 0 Next A: 1 Next B: 2 Accepting: False
-current letter a
-current state  State Number: 1 Next A: 4 Next B: 1 Accepting: True
-current letter a
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 4 Next A: 4 Next B: 3 Accepting: False
+
+
+8
+ABCE,BCDEG,DFG,BCE,BCEFG,DG,FG,TRAP
+ABCE,BCDEG,DG
+BCDEG,BCDEG,DFG
+DFG,BCE,BCEFG
+BCE,BCDEG,DG
+BCEFG,BCDEG,BCDEG
+DG,BCE,FG
+FG,TRAP,BCE
+TRAP,TRAP,TRAP
+BCDEG,DFG,BCEFG,DG,FG
+This is with table descriptive information
+
+BCDEG 1
+DFG 12
+BCE 011
+BCEFG 1421
+DG 12412
+FG 123123
+TRAP 2112111
+  ABCEBCDEGDFGBCEBCEFGDGFG
+This is without table descriptive information
+
+1
+12
+011
+1421
+12412
+123123
+2112111
+
+Using 3.4.1 Example
+aaba
 Declined!
-DFA on Page 154
-aaabbab
-current letter a
-current state  State Number: 0 Next A: 1 Next B: 4 Accepting: True
-current letter a
-current state  State Number: 1 Next A: 2 Next B: 4 Accepting: True
-current letter a
-current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
-current letter b
-current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
-current letter b
-current state  State Number: 3 Next A: 2 Next B: 5 Accepting: False
-current letter a
-current state  State Number: 5 Next A: 5 Next B: 5 Accepting: True
-current letter b
-current state  State Number: 5 Next A: 5 Next B: 5 Accepting: True
+
+
+8
+A,B,C,D,E,F,G,H
+A,B,A
+B,A,C
+C,D,B
+D,D,A
+E,D,F
+F,G,E
+G,F,G
+H,G,D
+D
+This is with table descriptive information
+
+B 4
+C 22
+D 111
+E 2201
+F 40212
+G 042124
+H 3321233
+  ABCDEFG
+This is without table descriptive information
+
+4
+22
+111
+2201
+40212
+042124
+3321233
+
+Using 4.4.1 Example
+abaa
 Accepted!
-DFA on Page 154
-aaaaaaaaabababa
-current letter a
-current state  State Number: 0 Next A: 1 Next B: 4 Accepting: True
-current letter a
-current state  State Number: 1 Next A: 2 Next B: 4 Accepting: True
-current letter a
-current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
-current letter b
-current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 3 Next A: 2 Next B: 5 Accepting: False
-current letter b
-current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 3 Next A: 2 Next B: 5 Accepting: False
-current letter b
-current state  State Number: 2 Next A: 2 Next B: 3 Accepting: False
-current letter a
-current state  State Number: 3 Next A: 2 Next B: 5 Accepting: False
+
+
+8
+A,B,C,D,E,F,G,H
+A,B,A
+B,A,C
+C,D,B
+D,D,A
+E,D,F
+F,G,E
+G,F,G
+H,G,D
+D
+This is with table descriptive information
+
+B 4
+C 22
+D 111
+E 2201
+F 40212
+G 042124
+H 3321233
+  ABCDEFG
+This is without table descriptive information
+
+4
+22
+111
+2201
+40212
+042124
+3321233
+
+Using 4.4.1 Example
+abbaab
 Declined!
-DFA on Page 155
-aaaaaaaaaaaaaaaa
-current letter a
-current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
-current letter a
-current state  State Number: 1 Next A: 2 Next B: 0 Accepting: False
-current letter a
-current state  State Number: 2 Next A: 3 Next B: 0 Accepting: False
-current letter a
-current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
-current letter a
-current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
-current letter a
-current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
-current letter a
-current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
-current letter a
-current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
-current letter a
-current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
-current letter a
-current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
-current letter a
-current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
-current letter a
-current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
-current letter a
-current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
-current letter a
-current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
-current letter a
-current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
-current letter a
-current state  State Number: 3 Next A: 3 Next B: 3 Accepting: True
+
+
+9
+A,B,C,D,E,F,G,H,I
+A,B,E
+B,C,F
+C,D,H
+D,E,H
+E,F,I
+F,G,B
+G,H,B
+H,I,C
+I,A,E
+C,F,I
+This is with table descriptive information
+
+B 2
+C 11
+D 021
+E 2012
+F 11011
+G 021021
+H 2012012
+I 11011011
+  ABCDEFGH
+This is without table descriptive information
+
+2
+11
+021
+2012
+11011
+021021
+2012012
+11011011
+
+Using 4.4.2 Example
+aaaaa
 Accepted!
-DFA on Page 155
-aabbbbbabababaabaa
-current letter a
-current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
-current letter a
-current state  State Number: 1 Next A: 2 Next B: 0 Accepting: False
-current letter b
-current state  State Number: 2 Next A: 3 Next B: 0 Accepting: False
-current letter b
-current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
-current letter b
-current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
-current letter b
-current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
-current letter b
-current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
-current letter a
-current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
-current letter b
-current state  State Number: 1 Next A: 2 Next B: 0 Accepting: False
-current letter a
-current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
-current letter b
-current state  State Number: 1 Next A: 2 Next B: 0 Accepting: False
-current letter a
-current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
-current letter b
-current state  State Number: 1 Next A: 2 Next B: 0 Accepting: False
-current letter a
-current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
-current letter a
-current state  State Number: 1 Next A: 2 Next B: 0 Accepting: False
-current letter b
-current state  State Number: 2 Next A: 3 Next B: 0 Accepting: False
-current letter a
-current state  State Number: 0 Next A: 1 Next B: 0 Accepting: False
-current letter a
-current state  State Number: 1 Next A: 2 Next B: 0 Accepting: False
+
+
+9
+A,B,C,D,E,F,G,H,I
+A,B,E
+B,C,F
+C,D,H
+D,E,H
+E,F,I
+F,G,B
+G,H,B
+H,I,C
+I,A,E
+C,F,I
+This is with table descriptive information
+
+B 2
+C 11
+D 021
+E 2012
+F 11011
+G 021021
+H 2012012
+I 11011011
+  ABCDEFGH
+This is without table descriptive information
+
+2
+11
+021
+2012
+11011
+021021
+2012012
+11011011
+
+Using 4.4.2 Example
+aaaaaa
 Declined!
+
+
+8
+A,B,C,D,E,F,G,H
+A,B,F
+B,G,C
+C,A,C
+D,C,G
+E,H,F
+F,C,G
+G,G,E
+H,G,C
+C
+This is with table descriptive information
+
+B 3
+C 11
+D 221
+E 0312
+F 22102
+G 431242
+H 3012323
+  ABCDEFG
+This is without table descriptive information
+
+3
+11
+221
+0312
+22102
+431242
+3012323
+
+Using 4.8 Example
+abbbb
+Accepted!
+
+
+8
+A,B,C,D,E,F,G,H
+A,B,F
+B,G,C
+C,A,C
+D,C,G
+E,H,F
+F,C,G
+G,G,E
+H,G,C
+C
+This is with table descriptive information
+
+B 3
+C 11
+D 221
+E 0312
+F 22102
+G 431242
+H 3012323
+  ABCDEFG
+This is without table descriptive information
+
+3
+11
+221
+0312
+22102
+431242
+3012323
+
+Using 4.8 Example
+abba
+Declined!
+
+
+5
+AE,BH,C,DF,G
+AE,BH,DF
+BH,G,C
+C,AE,C
+DF,C,G
+G,G,AE
+C
+This is with table descriptive information
+
+BH 3
+C 11
+DF 221
+G 4312
+  AEBHCDF
+This is without table descriptive information
+
+3
+11
+221
+4312
+
+Using 4.10 Example
+abbbb
+Accepted!
+
+
+5
+AE,BH,C,DF,G
+AE,BH,DF
+BH,G,C
+C,AE,C
+DF,C,G
+G,G,AE
+C
+This is with table descriptive information
+
+BH 3
+C 11
+DF 221
+G 4312
+  AEBHCDF
+This is without table descriptive information
+
+3
+11
+221
+4312
+
+Using 4.10 Example
+abba
+Declined!
+
+
