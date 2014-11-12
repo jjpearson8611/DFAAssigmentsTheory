@@ -1,0 +1,7 @@
+C:\Users\BuckDich\Desktop\Assignment 4\TuringMachineSimulator\bin\Debug\TuringMachineSimulator.exe.config
+C:\Users\BuckDich\Desktop\DFAAssigmentsTheory\Assignment Five -- Turing Machine Simulator\bin\Debug\TuringMachineSimulator.exe.config
+C:\Users\BuckDich\Desktop\DFAAssigmentsTheory\Assignment Five -- Turing Machine Simulator\obj\Debug\TuringMachineSimulator.csprojResolveAssemblyReference.cache
+C:\Users\BuckDich\Desktop\DFAAssigmentsTheory\Assignment Five -- Turing Machine Simulator\bin\Debug\TuringMachineSimulator.exe
+C:\Users\BuckDich\Desktop\DFAAssigmentsTheory\Assignment Five -- Turing Machine Simulator\bin\Debug\TuringMachineSimulator.pdb
+C:\Users\BuckDich\Desktop\DFAAssigmentsTheory\Assignment Five -- Turing Machine Simulator\obj\Debug\TuringMachineSimulator.exe
+C:\Users\BuckDich\Desktop\DFAAssigmentsTheory\Assignment Five -- Turing Machine Simulator\obj\Debug\TuringMachineSimulator.pdb
