@@ -17,11 +17,6 @@ namespace TuringMachineSimulator
             //Default Constructor
         }
 
-        public TuringMachine(string fileLocation)
-        {
-
-        }
-
         //properties
         public int NumberOfStates
         {
@@ -29,6 +24,8 @@ namespace TuringMachineSimulator
             set;
         }
 
+
+        #region Properties
         /// <summary>
         /// Set of States this will also take care of the transition functions
         /// </summary>
@@ -82,5 +79,32 @@ namespace TuringMachineSimulator
             get;
             set;
         }
+
+        #endregion
+
+        #region Methods
+        public void HandleInput(string filePath)
+        {
+
+
+        }
+
+        public void HandleString(string input)
+        {
+            while (input.Length != 0)
+            {
+                string CurrentLetter = input.Substring(0, 1);
+
+
+            }
+        }
+
+        public void chomp(string letter)
+        {
+
+
+        }
+
+        #endregion
     }
 }
