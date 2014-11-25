@@ -91,20 +91,60 @@ namespace TuringMachineSimulator
 
         public void HandleString(string input)
         {
-            while (input.Length != 0)
+            State CurrentState = StartingState;
+            
+            
+            //points to the start of the tape
+            int pointer = 0;
+            string CurrentLetter = string.Empty;
+            bool KeepGoing = true;
+
+            while (KeepGoing)
             {
-                string CurrentLetter = input.Substring(0, 1);
+                //we are in our current string
+                if(pointer < 0 && pointer > input.Length)
+                {
+                    //we need to add a blank before it
+                    if(pointer < 0)
+                    {
+                        //add stuff to the beginning and adjust pointer to be 0
+                        while(pointer < 0)
+                        {
+                            pointer++;
+                            input = Blank + input;
+                        }
+                    }
+                    else
+                    {
+                        //add blanks onto the end
+                        while(pointer > input.Length)
+                        {
+                            input = input + Blank;
+                        }
+                    }
+                }
 
+                //peel off an input
+                CurrentLetter = input.Substring(pointer, 1);
 
+                string NewLetter = CurrentState.GetOutput(CurrentLetter);
+
+                //this needs to be tested
+                input = input.Substring(0, pointer) + NewLetter + input.Substring(pointer, input.Length - pointer);
+                
+                //get the direction we are traveling adjust pointer when done
+                if (string.Compare(CurrentState.GetDirection(CurrentLetter), "R") == 0)
+                {
+                    pointer++;
+                }
+                else
+                {
+                    pointer--;
+                }
+
+                CurrentState = States.IndexOf(CurrentState.NextState());
             }
         }
-
-        public void chomp(string letter)
-        {
-
-
-        }
-
         #endregion
     }
 }

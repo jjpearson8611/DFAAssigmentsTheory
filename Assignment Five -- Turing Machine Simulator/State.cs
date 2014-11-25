@@ -19,14 +19,15 @@ namespace TuringMachineSimulator
         /// <param name="outputList"></param>
         /// <param name="inputList"></param>
         /// <param name="directionList"></param>
-        public State(List<string> outputList, List<string>inputList, List<string> directionList)
+        public State(List<string> outputList, List<string>inputList, List<string> directionList, List<State> nextState)
         {
             OutPutList = outputList;
             InputList = inputList;
             DirectionList = directionList;
+            NextStateList = nextState;
         }
 
-
+        #region properites
         public List<string> OutPutList
         {
             get;
@@ -45,6 +46,12 @@ namespace TuringMachineSimulator
             set;
         }
 
+        public List<State> NextStateList
+        {
+            get;
+            set;
+        }
+        #endregion
 
         /// <summary>
         /// given an input return the direction the tape is supposed to go
@@ -54,6 +61,17 @@ namespace TuringMachineSimulator
         public string GetDirection(string input)
         {
             return DirectionList[InputList.IndexOf(input)];
+        }
+
+
+        /// <summary>
+        /// what is the next state of the turing machine
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public State NextState(string input)
+        {
+            return NextStateList[InputList.IndexOf(input)];
         }
 
         /// <summary>
