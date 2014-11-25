@@ -83,16 +83,39 @@ namespace TuringMachineSimulator
         #endregion
 
         #region Methods
-        public void HandleInput(string filePath)
+        public bool HandleInput(string filePath)
         {
+            /*
+             * Input should be constructed as follows
+             * First line should have the number of states
+             * Second line should have the statenames comma seperated
+             * Third line is the tape alphabet comma seperated
+             * Fourth line is the blank symbol that we will be using
+             * fifth line is the input symbols comma seperated
+             * Sixth line has the initial state name
+             * Seventh line has the accepting or final state names comma seperated
+             * From there on it will have the transition functions
+             * Each state and its transition will follow the following setup rules
+             * 
+             * It will start with the state name on its own line
+             * then it will have read in letter, write out letter, direction, new state
+             * it will have as many as it wants trap states are preferred but may or may not be needed
+             * I am currently deciding on that.
+             * 
+             * If input is read correctly it will return true otherwise false and fix your input
+             * 
+             */
 
 
+
+            return false;
         }
 
-        public void HandleString(string input)
+        public bool HandleString(string input)
         {
             State CurrentState = StartingState;
-            
+
+            bool accepted = false;
             
             //points to the start of the tape
             int pointer = 0;
@@ -142,8 +165,10 @@ namespace TuringMachineSimulator
                     pointer--;
                 }
 
-                CurrentState = States.IndexOf(CurrentState.NextState());
+                CurrentState = States[States.IndexOf(CurrentState.NextState(CurrentLetter))];
             }
+
+            return accepted;
         }
         #endregion
     }
