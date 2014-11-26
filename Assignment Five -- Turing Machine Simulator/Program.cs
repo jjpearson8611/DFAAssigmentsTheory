@@ -12,10 +12,13 @@ namespace TuringMachineSimulator
         {
             //first we ask the user what turing machine they would like to use
             bool correctInput = false;
+            bool exit = false;
+
+            TuringMachine NewMachine = new TuringMachine();
 
             while (!correctInput)
             {
-                Console.WriteLine("Which machine would you like to use?");
+                Console.WriteLine("Which machine would you like to use?\n1) 8.2.1\n2) 8.2.2\n3) quit");
                 string input = Console.ReadLine();
                 int choice;
 
@@ -25,13 +28,33 @@ namespace TuringMachineSimulator
                     switch (choice)
                     {
                         case 1:
-                            Console.WriteLine("Coming Soon");
-                            correctInput = true;
+                            Console.WriteLine("Using 8.2.1");
+                            if (NewMachine.HandleInput("8.2.1.txt"))
+                            {
+                                Console.WriteLine("readin succeeded");
+                                correctInput = true;
+                            }
+                            else
+                            {
+                                Console.WriteLine("File Read Failed\n");
+                            }
                             break;
 
-                        case 2:
-                            Console.WriteLine("coming Soon");
+                        case 2: 
+                            Console.WriteLine("Using 8.2.2");
+                            if (NewMachine.HandleInput("8.2.2.txt"))
+                            {
+                                Console.WriteLine("readin succeeded");
+                                correctInput = true;
+                            }
+                            else
+                            {
+                                Console.WriteLine("File Read Failed\n");
+                            }
+                            break;
+                        case 3:
                             correctInput = true;
+                            exit = true;
                             break;
                         default:
                             Console.WriteLine("Please Insert a number choice");
@@ -39,14 +62,21 @@ namespace TuringMachineSimulator
                     }
                 }
             }
+            if (NewMachine.StartingState != null && exit == false) 
+            {
+                Console.WriteLine("What is your input?\n");
+                string inputString = Console.ReadLine();
+                if (NewMachine.HandleString(inputString))
+                {
+                    Console.WriteLine("Accepted String");
+                }
+                else
+                {
+                    Console.WriteLine("get outta here!");
+                }
+            }
 
-            //we load that turing machine in
-
-
-            //we determine what the language is is for the input alphabet and show it to the user
-            // and ask them to create a string based on the input alphabet
-
-
+            Console.ReadLine();
         }
     }
 }

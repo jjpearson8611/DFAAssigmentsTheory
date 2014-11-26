@@ -11,6 +11,19 @@ namespace TuringMachineSimulator
         public State()
         {
             //default constructor
+            this.OutPutList = new List<string>();
+            this.InputList = new List<string>();
+            this.DirectionList = new List<string>();
+            this.NextStateList = new List<State>();
+        }
+
+        public State(string Name)
+        {
+            StateName = Name;
+            this.OutPutList = new List<string>();
+            this.InputList = new List<string>();
+            this.DirectionList = new List<string>();
+            this.NextStateList = new List<State>();
         }
 
         /// <summary>
@@ -82,7 +95,7 @@ namespace TuringMachineSimulator
                 string Temp = DirectionList[InputList.IndexOf(input)];
                 return true;
             }
-            catch(IndexOutOfRangeException e)
+            catch (ArgumentOutOfRangeException e)
             {
                 return false;
             }
@@ -121,7 +134,7 @@ namespace TuringMachineSimulator
                 State temp = NextStateList[InputList.IndexOf(input)];
                 return true;
             }
-            catch(IndexOutOfRangeException e)
+            catch(ArgumentOutOfRangeException e)
             {
                 return false;
             }
@@ -149,7 +162,7 @@ namespace TuringMachineSimulator
                 string temp = OutPutList[InputList.IndexOf(input)];
                 return true;
             }
-            catch (IndexOutOfRangeException e)
+            catch (ArgumentOutOfRangeException e)
             {
                 return false;
             }

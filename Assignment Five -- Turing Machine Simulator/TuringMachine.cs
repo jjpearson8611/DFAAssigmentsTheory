@@ -15,7 +15,14 @@ namespace TuringMachineSimulator
         public TuringMachine()
         {
             //Default Constructor
+            this.States = new List<State>();
+            this.Alphabet = new List<string>();
+            this.AcceptingStates = new List<State>();
         }
+
+
+
+        #region Properties
 
         //properties
         public int NumberOfStates
@@ -25,7 +32,6 @@ namespace TuringMachineSimulator
         }
 
 
-        #region Properties
         /// <summary>
         /// Set of States this will also take care of the transition functions
         /// </summary>
@@ -97,23 +103,132 @@ namespace TuringMachineSimulator
              * From there on it will have the transition functions
              * Each state and its transition will follow the following setup rules
              * 
-             * It will start with the state name on its own line
-             * then it will have read in letter, write out letter, direction, new state
+             * It will start with the state name, have read in letter, write out letter, direction, new state
              * it will have as many as it wants trap states are preferred but may or may not be needed
              * I am currently deciding on that.
              * 
              * If input is read correctly it will return true otherwise false and fix your input
              * 
              */
+            try
+            {
+                StreamReader reader = new StreamReader(filePath);
+                int loopCounter = 1;
+
+                while (!reader.EndOfStream)
+                {
+                    switch (loopCounter)
+                    {
+                        case 1:
+                            loopCounter++;
+                            int temp;
+                            if (int.TryParse(reader.ReadLine(), out temp))
+                            {
+                                this.NumberOfStates = temp;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        break;
+                        case 2:
+                            loopCounter++;
+                            List<string> states = reader.ReadLine().Split(',').ToList<string>();
+                            foreach (var state in states)
+                            {
+                                State anotherTemp = new State(state);
+                                this.States.Add(anotherTemp);
+
+                            }
+                        break;
+                        case 3:
+                            loopCounter++;
+                            List<string> line = reader.ReadLine().Split(',').ToList<string>();
+                            foreach (var a in line)
+                            {
+                                this.Alphabet.Add(a);
+                            }
+                        break;
+                        case 4:
+                            loopCounter++;
+                            this.Blank = reader.ReadLine();
+                        break;
+                        case 5:
+                            loopCounter++;
+                            this.Input = reader.ReadLine().Split(',').ToList<string>();
+                        break;
+                        case 6:
+                            loopCounter++;
+                            var startingStateString = reader.ReadLine();
+                            State tempState = new State();
+                            foreach (var e in this.States)
+                            {
+                                if (string.Compare(e.StateName, startingStateString) == 0)
+                                {
+                                    tempState = e;
+                                }
+                            }
+                            this.StartingState = tempState;
+                        break;
+                        case 7:
+                            loopCounter++;
+                            var lineOfData = reader.ReadLine().Split(',').ToList<string>();
+
+                            foreach (var e in lineOfData)
+                            {
+                                foreach (var a in this.States)
+                                {
+                                    if (string.Compare(e, a.StateName) == 0)
+                                    {
+                                        this.AcceptingStates.Add(a);
+                                    }
+                                }
+                            }
+                        break;
+
+                        //this is the part that will get the states and all their data
+                        case 8:
+                            var deltaString = reader.ReadLine().Split(',').ToList<string>();
+                            int pointer = -1;
+
+                            for (int i = 0; i < this.States.Count; i++)
+                            {
+                                if (string.Compare(States[i].StateName, deltaString[0]) == 0)
+                                {
+                                    pointer = i;
+                                }
+                            }
+
+                            this.States[pointer].DirectionList.Add(deltaString[3]);
+                            this.States[pointer].InputList.Add(deltaString[1]);
+                            this.States[pointer].OutPutList.Add(deltaString[2]);
+
+                            for (int i = 0; i < this.States.Count; i++)
+                            {
+                                if (string.Compare(States[i].StateName, deltaString[4]) == 0)
+                                {
+                                    this.States[pointer].NextStateList.Add(this.States[i]);
+                                }
+                            }
 
 
-
-            return false;
+                        break;
+                    }
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public bool HandleString(string input)
         {
+            
             State CurrentState = StartingState;
+
+            input = this.Blank + input;
 
             bool accepted = false;
             
@@ -121,11 +236,12 @@ namespace TuringMachineSimulator
             int pointer = 0;
             string CurrentLetter = string.Empty;
             bool KeepGoing = true;
+            string NewLetter = string.Empty;
 
             while (KeepGoing)
             {
                 //we are in our current string
-                if(pointer < 0 && pointer > input.Length)
+                if(pointer < 0 || pointer >= input.Length)
                 {
                     //we need to add a blank before it
                     if(pointer < 0)
@@ -140,7 +256,7 @@ namespace TuringMachineSimulator
                     else
                     {
                         //add blanks onto the end
-                        while(pointer > input.Length)
+                        while(pointer >= input.Length)
                         {
                             input = input + Blank;
                         }
@@ -150,10 +266,27 @@ namespace TuringMachineSimulator
                 //peel off an input
                 CurrentLetter = input.Substring(pointer, 1);
 
-                string NewLetter = CurrentState.GetOutput(CurrentLetter);
-
+                if (CurrentState.TestFullState(CurrentLetter))
+                {
+                    NewLetter = CurrentState.GetOutput(CurrentLetter);
+                }
+                else
+                {
+                    if (this.AcceptingStates.Contains(CurrentState))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
                 //this needs to be tested
-                input = input.Substring(0, pointer) + NewLetter + input.Substring(pointer, input.Length - pointer);
+                string temp;
+                temp = input.Substring(0, pointer);
+                temp = temp + NewLetter;
+                temp = temp + input.Substring(pointer + 1, input.Length - pointer - 1);
+                input = temp;
                 
                 //get the direction we are traveling adjust pointer when done
                 if (string.Compare(CurrentState.GetDirection(CurrentLetter), "R") == 0)
