@@ -8,9 +8,11 @@ namespace TuringMachineSimulator
 {
     class State
     {
+        //outputlist inputlist direction list and nextstate list are parallel arrays
         public State()
         {
             //default constructor
+            //initialize the lists to prevent null reference errors
             this.OutPutList = new List<string>();
             this.InputList = new List<string>();
             this.DirectionList = new List<string>();
@@ -20,24 +22,12 @@ namespace TuringMachineSimulator
         public State(string Name)
         {
             StateName = Name;
+         
+            //initialize the lists to prevent null reference errors
             this.OutPutList = new List<string>();
             this.InputList = new List<string>();
             this.DirectionList = new List<string>();
             this.NextStateList = new List<State>();
-        }
-
-        /// <summary>
-        /// Takes in a list of how it is supposed to react and reacts accordingly
-        /// </summary>
-        /// <param name="outputList"></param>
-        /// <param name="inputList"></param>
-        /// <param name="directionList"></param>
-        public State(List<string> outputList, List<string>inputList, List<string> directionList, List<State> nextState, string Name)
-        {
-            OutPutList = outputList;
-            InputList = inputList;
-            DirectionList = directionList;
-            NextStateList = nextState;
         }
 
         #region properites

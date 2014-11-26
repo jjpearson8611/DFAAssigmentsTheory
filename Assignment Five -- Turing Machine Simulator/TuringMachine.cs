@@ -215,6 +215,7 @@ namespace TuringMachineSimulator
                         break;
                     }
                 }
+                reader.Close();
                 return true;
             }
             catch
@@ -272,6 +273,7 @@ namespace TuringMachineSimulator
                 }
                 else
                 {
+                    //we have no where to go are we halting on a good accepting final state or not? 
                     if (this.AcceptingStates.Contains(CurrentState))
                     {
                         return true;
@@ -281,11 +283,20 @@ namespace TuringMachineSimulator
                         return false;
                     }
                 }
-                //this needs to be tested
+                
+                //does the string a little at a time could be condensed but was split up for easier debugging
                 string temp;
+
+                //get the info up to the one we are at
                 temp = input.Substring(0, pointer);
+
+                //update the one that we are at
                 temp = temp + NewLetter;
+
+                //get the rest
                 temp = temp + input.Substring(pointer + 1, input.Length - pointer - 1);
+                
+                //put it back so we can use it 
                 input = temp;
                 
                 //get the direction we are traveling adjust pointer when done
@@ -298,6 +309,7 @@ namespace TuringMachineSimulator
                     pointer--;
                 }
 
+                //change the state to the next state
                 CurrentState = States[States.IndexOf(CurrentState.NextState(CurrentLetter))];
             }
 
